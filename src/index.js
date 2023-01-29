@@ -46,7 +46,7 @@ async function getWeather() {
   } catch (err) { handleErrors(); }
 }
 
-searchB.addEventListener('click', (event) => {
-  event.preventDefault;
+searchB.addEventListener('click', (e) => {
+  e.preventDefault;
   getWeather();
 });
