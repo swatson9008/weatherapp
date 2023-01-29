@@ -1,5 +1,13 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable quotes */
 /* eslint-disable no-console */
 /* eslint-disable no-alert */
+
+import './style.css';
+
+const searchField = document.getElementById('searchField');
+const searchB = document.getElementById('searchB');
+
 function handleErrors() {
   console.log('error');
   alert('Please try again!');
@@ -7,12 +15,38 @@ function handleErrors() {
 
 async function defaultApi() {
   try {
-    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65', { mode: 'cors' });
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65&units=imperial', { mode: 'cors' });
     const weatherData = await response.json();
     console.log(weatherData);
+    console.log(weatherData.main.temp);
+    const weatherFinal = {
+      temp: weatherData.main.temp,
+      feelsLike: weatherData.main.feels_like,
+      weatherDesc: weatherData.weather[0].description,
+      windSpeed: weatherData.wind.speed,
+      name: weatherData.name,
+    };
+    console.log(weatherFinal);
   } catch (err) { handleErrors(); }
 }
 
 defaultApi();
 
-console.log('test');
+async function getWeather() {
+  try {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchField.value}&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65&units=imperial`, { mode: 'cors' });
+    const weatherData = await response.json();
+    const weatherFinal = {
+      temp: weatherData.main.temp,
+      feelsLike: weatherData.main.feels_like,
+      weatherDesc: weatherData.weather[0].description,
+      windSpeed: weatherData.wind.speed,
+    };
+    console.log(weatherFinal);
+  } catch (err) { handleErrors(); }
+}
+
+searchB.addEventListener('click', (event) => {
+  event.preventDefault;
+  getWeather();
+});
