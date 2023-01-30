@@ -45,7 +45,7 @@ async function getWeather() {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchField.value}&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65&units=imperial`, { mode: 'cors' });
     const weatherData = await response.json();
     /* const newWeather = await weatherData.weatherMake(); */
-    const newWeather = {
+    let newWeather = {
       temp: weatherData.main.temp,
       feelsLike: weatherData.main.feels_like,
       weatherDesc: weatherData.weather[0].description,
