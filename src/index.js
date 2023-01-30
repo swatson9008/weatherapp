@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+/* eslint-disable prefer-const */
 /* eslint-disable new-cap */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unused-expressions */
@@ -9,17 +11,7 @@ import './style.css';
 
 const searchField = document.getElementById('searchField');
 const searchB = document.getElementById('searchB');
-const weatherContainer = [];
-
-class weatherC {
-  constructor(temp, feelsLike, weatherDesc, windSpeed, name) {
-    this.name = name;
-    this.temp = temp;
-    this.feelsLike = feelsLike;
-    this.windSpeed = windSpeed;
-    this.weatherDesc = weatherDesc;
-  }
-}
+let newWeather = {};
 
 function handleErrors() {
   console.log('error');
@@ -45,20 +37,22 @@ async function defaultApi() {
 defaultApi();
 
 function weatherMake() {
-  const nuWeather = new weatherC();
-  weatherC.name = weatherData.name;
-  weatherC.temp = weatherData.main.temp;
-  weatherC.feelsLike = weatherData.main.feels_like;
-  weatherC.weatherDesc = weatherData.weather[0].description;
-  weatherC.windSpeed = weatherData.wind.windSpeed;
-  console.log(nuWeather);
+  console.log(newWeather);
 }
 
 async function getWeather() {
   try {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchField.value}&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65&units=imperial`, { mode: 'cors' });
     const weatherData = await response.json();
-    const newWeather = await weatherData.weatherMake();
+    /* const newWeather = await weatherData.weatherMake(); */
+    const newWeather = {
+      temp: weatherData.main.temp,
+      feelsLike: weatherData.main.feels_like,
+      weatherDesc: weatherData.weather[0].description,
+      windSpeed: weatherData.wind.speed,
+      name: weatherData.name,
+    };
+    console.log(newWeather);
   } catch (err) { handleErrors(); }
 }
 
