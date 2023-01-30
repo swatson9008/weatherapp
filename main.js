@@ -22,11 +22,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../src/asset/blue-cloudy-sky-landscape-background-free-vector.webp */ "./src/asset/blue-cloudy-sky-landscape-background-free-vector.webp"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../src/asset/blue-cloudy-sky-landscape-background-free-vector.png */ "./src/asset/blue-cloudy-sky-landscape-background-free-vector.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    background-color: darkgray;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\ninput {\n    all: unset;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 50px;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,0BAA0B;IAC1B,yDAA2F;AAC/F;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,sBAAsB;IACtB,gBAAgB;AACpB","sourcesContent":["body {\n    background-color: darkgray;\n    background-image: url('../src/asset/blue-cloudy-sky-landscape-background-free-vector.webp');\n}\n\ninput {\n    all: unset;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 50px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    background-color: darkgray;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\ninput {\n    all: unset;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 50px;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,0BAA0B;IAC1B,yDAA0F;AAC9F;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,sBAAsB;IACtB,gBAAgB;AACpB","sourcesContent":["body {\n    background-color: darkgray;\n    background-image: url('../src/asset/blue-cloudy-sky-landscape-background-free-vector.png');\n}\n\ninput {\n    all: unset;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 50px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -547,13 +547,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/asset/blue-cloudy-sky-landscape-background-free-vector.webp":
-/*!*************************************************************************!*\
-  !*** ./src/asset/blue-cloudy-sky-landscape-background-free-vector.webp ***!
-  \*************************************************************************/
+/***/ "./src/asset/blue-cloudy-sky-landscape-background-free-vector.png":
+/*!************************************************************************!*\
+  !*** ./src/asset/blue-cloudy-sky-landscape-background-free-vector.png ***!
+  \************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "83fb8653906a54d489df.webp";
+module.exports = __webpack_require__.p + "b58f8587256af558f04c.png";
 
 /***/ })
 
