@@ -11,7 +11,8 @@ import './style.css';
 
 const searchField = document.getElementById('searchField');
 const searchB = document.getElementById('searchB');
-let newWeather = {};
+const mainContainer = document.getElementById('mainContainer');
+/* let newWeather = {}; */
 
 function handleErrors() {
   console.log('error');
@@ -36,15 +37,10 @@ async function defaultApi() {
 
 defaultApi();
 
-function weatherMake() {
-  console.log(newWeather);
-}
-
 async function getWeather() {
   try {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchField.value}&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65&units=imperial`, { mode: 'cors' });
     const weatherData = await response.json();
-    /* const newWeather = await weatherData.weatherMake(); */
     let newWeather = {
       temp: weatherData.main.temp,
       feelsLike: weatherData.main.feels_like,
@@ -52,12 +48,18 @@ async function getWeather() {
       windSpeed: weatherData.wind.speed,
       name: weatherData.name,
     };
-    console.log(newWeather);
-    const weatherM = await newWeather.weatherMake();
+    return newWeather;
   } catch (err) { handleErrors(); }
+}
+
+async function weatherMaster() {
+  const weatherObj = await getWeather();
+  let weatherDiv = document.createElement('div');
+  weatherDiv.innerHTML = '<p>' + weatherObj.name + '<p>' + weatherObj.temp + 'F' + '<p>' + 'feels like ' + weatherObj.feelsLike + 'F' + '<p>' + weatherObj.weatherDesc;
+  mainContainer.appendChild(weatherDiv);
 }
 
 searchB.addEventListener('click', (e) => {
   e.preventDefault();
-  getWeather();
+  weatherMaster();
 });
