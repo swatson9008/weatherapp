@@ -588,6 +588,8 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* eslint-disable no-shadow */
+/* eslint-disable prefer-const */
 /* eslint-disable new-cap */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unused-expressions */
@@ -598,16 +600,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const searchField = document.getElementById('searchField');
 const searchB = document.getElementById('searchB');
-const weatherContainer = [];
-class weatherC {
-  constructor(temp, feelsLike, weatherDesc, windSpeed, name) {
-    this.name = name;
-    this.temp = temp;
-    this.feelsLike = feelsLike;
-    this.windSpeed = windSpeed;
-    this.weatherDesc = weatherDesc;
-  }
-}
+let newWeather = {};
 function handleErrors() {
   console.log('error');
   alert('Please try again!');
@@ -633,13 +626,7 @@ async function defaultApi() {
 }
 defaultApi();
 function weatherMake() {
-  const nuWeather = new weatherC();
-  weatherC.name = weatherData.name;
-  weatherC.temp = weatherData.main.temp;
-  weatherC.feelsLike = weatherData.main.feels_like;
-  weatherC.weatherDesc = weatherData.weather[0].description;
-  weatherC.windSpeed = weatherData.wind.windSpeed;
-  console.log(nuWeather);
+  console.log(newWeather);
 }
 async function getWeather() {
   try {
@@ -647,7 +634,15 @@ async function getWeather() {
       mode: 'cors'
     });
     const weatherData = await response.json();
-    const newWeather = await weatherData.weatherMake();
+    /* const newWeather = await weatherData.weatherMake(); */
+    const newWeather = {
+      temp: weatherData.main.temp,
+      feelsLike: weatherData.main.feels_like,
+      weatherDesc: weatherData.weather[0].description,
+      windSpeed: weatherData.wind.speed,
+      name: weatherData.name
+    };
+    console.log(newWeather);
   } catch (err) {
     handleErrors();
   }
