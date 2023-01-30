@@ -1,5 +1,10 @@
 body {
     background-color: darkgray;
+    background-image: url('../src/asset/blue-cloudy-sky-landscape-background-free-vector.webp');
+}
+
+input {
+    all: unset;
 }
 
 #mainContainer {
@@ -7,4 +12,5 @@ body {
     justify-content: center;  
     align-items: center;  
     flex-direction: column;
+    margin-top: 50px;
 }
