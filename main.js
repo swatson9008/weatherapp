@@ -635,7 +635,7 @@ async function getWeather() {
     });
     const weatherData = await response.json();
     /* const newWeather = await weatherData.weatherMake(); */
-    const newWeather = {
+    let newWeather = {
       temp: weatherData.main.temp,
       feelsLike: weatherData.main.feels_like,
       weatherDesc: weatherData.weather[0].description,
