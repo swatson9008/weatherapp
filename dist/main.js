@@ -643,6 +643,7 @@ async function getWeather() {
       name: weatherData.name
     };
     console.log(newWeather);
+    const weatherM = await newWeather.weatherMake();
   } catch (err) {
     handleErrors();
   }
