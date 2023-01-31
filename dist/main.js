@@ -699,6 +699,9 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* eslint-disable prefer-template */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable no-useless-concat */
 /* eslint-disable no-shadow */
 /* eslint-disable prefer-const */
@@ -759,12 +762,59 @@ async function getWeather() {
     handleErrors();
   }
 }
+async function getCWeather() {
+  try {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchField.value}&APPID=ddc8fb6879ccbfc5d2782d6a632b1b65&units=metric`, {
+      mode: 'cors'
+    });
+    const weatherData = await response.json();
+    let newWeather = {
+      temp: weatherData.main.temp,
+      feelsLike: weatherData.main.feels_like,
+      weatherDesc: weatherData.weather[0].description,
+      windSpeed: weatherData.wind.speed,
+      name: weatherData.name
+    };
+    return newWeather;
+  } catch (err) {
+    handleErrors();
+  }
+}
+async function makeCtFbtn() {
+  let FtC = document.createElement('div');
+  FtC.innerHTML = '<button>F ⇄ C</button>';
+  FtC.addEventListener('click', e => {
+    e.preventDefault();
+    weatherMaster();
+  });
+  return FtC;
+}
+async function weatherCMaster() {
+  weatherContainer.innerHTML = "";
+  const weatherObj = await getCWeather();
+  let weatherDiv = document.createElement('div');
+  weatherDiv.innerHTML = '<p>' + weatherObj.name + '<p>' + weatherObj.temp + 'C' + '<p>' + 'feels like ' + weatherObj.feelsLike + 'C' + '<p>' + weatherObj.windSpeed + ' KM' + '<p>' + weatherObj.weatherDesc;
+  weatherContainer.appendChild(weatherDiv);
+  let CtoF = await makeCtFbtn();
+  weatherDiv.appendChild(CtoF);
+}
+async function makeFtCbtn() {
+  let FtC = document.createElement('div');
+  FtC.innerHTML = '<button>F ⇄ C</button>';
+  FtC.addEventListener('click', e => {
+    e.preventDefault();
+    weatherCMaster();
+  });
+  return FtC;
+}
 async function weatherMaster() {
   weatherContainer.innerHTML = "";
   const weatherObj = await getWeather();
   let weatherDiv = document.createElement('div');
   weatherDiv.innerHTML = '<p>' + weatherObj.name + '<p>' + weatherObj.temp + 'F' + '<p>' + 'feels like ' + weatherObj.feelsLike + 'F' + '<p>' + weatherObj.windSpeed + ' MPH' + '<p>' + weatherObj.weatherDesc;
   weatherContainer.appendChild(weatherDiv);
+  let FtoC = await makeFtCbtn();
+  weatherDiv.appendChild(FtoC);
 }
 searchB.addEventListener('click', e => {
   e.preventDefault();
