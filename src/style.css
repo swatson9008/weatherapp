@@ -23,6 +23,11 @@ button {
     cursor: pointer;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'search-style';
+}
+
 #mainContainer {
     display: flex;  
     justify-content: center;  
