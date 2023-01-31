@@ -26,6 +26,20 @@ button {
     margin-top: 100px;
 }
 
+#searchField {
+    background-color: rgba(151, 204, 231, 0.747);
+    border: rgba(164, 217, 243, 0.747) solid 3px;
+    border-radius: 4px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#searchB {
+    background-color: rgb(107, 156, 204);
+    padding: 5px;
+    border-radius: 4px;
+}
+
 #weatherDiv {
     display:grid;
     margin-top: 50px;
@@ -49,6 +63,12 @@ button {
 
 #iconID {
     grid-row: 2 / 5;
+}
+
+#feelID {
+    font-style: italic;
+    font-size: 12px;
+    opacity: 0.7;
 }
 
 #FnC {
