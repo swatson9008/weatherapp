@@ -3,6 +3,11 @@
     src: url(../src/asset/Unbounded-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: 'search-style';
+    src: url(../src/asset/RussoOne-Regular.ttf);
+}
+
 body {
     background-color: darkgray;
     background-image: url('../src/asset/blue-cloudy-sky-landscape-background-free-vector.png');
@@ -32,12 +37,14 @@ button {
     border-radius: 4px;
     padding: 5px;
     margin-right: 10px;
+    font-family: 'search-style';
 }
 
 #searchB {
     background-color: rgb(107, 156, 204);
     padding: 5px;
     border-radius: 4px;
+    font-family: 'search-style';
 }
 
 #weatherDiv {
