@@ -54,6 +54,7 @@ async function getWeather() {
       weatherDesc: weatherData.weather[0].description,
       windSpeed: weatherData.wind.speed,
       name: weatherData.name,
+      icon: weatherData.weather[0].icon,
     };
     return newWeather;
   } catch (err) { handleErrors(); }
@@ -69,6 +70,7 @@ async function getCWeather() {
       weatherDesc: weatherData.weather[0].description,
       windSpeed: weatherData.wind.speed,
       name: weatherData.name,
+      icon: weatherData.weather[0].icon,
     };
     return newWeather;
   } catch (err) { handleErrors(); }
@@ -76,6 +78,7 @@ async function getCWeather() {
 
 async function makeCtFbtn() {
   let FtC = document.createElement('div');
+  FtC.id = 'FtoC';
   FtC.innerHTML = '<button>F ⇄ C</button>';
   FtC.addEventListener('click', (e) => {
     e.preventDefault();
@@ -86,21 +89,44 @@ async function makeCtFbtn() {
 
 async function weatherCMaster() {
   weatherContainer.innerHTML = "";
-  const weatherObj = await getCWeather();
+  const weatherObj = await getWeather();
   let weatherDiv = document.createElement('div');
-  weatherDiv.innerHTML = 
-    '<p>' + weatherObj.name + '<p>' + 
-    weatherObj.temp + 'C' + '<p>' + 'feels like ' + 
-    weatherObj.feelsLike + 'C' + '<p>' + weatherObj.windSpeed + ' KM' +
-    '<p>' + weatherObj.weatherDesc;
+  weatherDiv.id = 'weatherDiv';
   weatherContainer.appendChild(weatherDiv);
+  let nameDiv = document.createElement('div');
+  nameDiv.id = 'nameID';
+  nameDiv.innerHTML = weatherObj.name;
+  weatherDiv.appendChild(nameDiv);
+  let iconDiv = document.createElement('div');
+  iconDiv.id = 'iconID';
+  weatherDiv.appendChild(iconDiv);
+  let iconPic = document.createElement('img');
+  iconPic.src = `http://openweathermap.org/img/wn/${weatherObj.icon}@2x.png`;
+  iconDiv.appendChild(iconPic);
+  let tempDiv = document.createElement('div');
+  tempDiv.id = 'tempID';
+  tempDiv.innerHTML = weatherObj.temp + 'C';
+  weatherDiv.appendChild(tempDiv);
+  let feelDiv = document.createElement('div');
+  feelDiv.id = 'feelID';
+  feelDiv.innerHTML = 'Feels like ' + weatherObj.feelsLike + 'C';
+  weatherDiv.appendChild(feelDiv);
+  let WSDiv = document.createElement('div');
+  WSDiv.id = 'WSID';
+  WSDiv.innerHTML = weatherObj.windSpeed + ' KM';
+  weatherDiv.appendChild(WSDiv);
+  let WeatherDescDiv = document.createElement('div');
+  WeatherDescDiv.id = 'WeatherDescDivID';
+  WeatherDescDiv.innerHTML = weatherObj.weatherDesc;
+  weatherDiv.appendChild(WeatherDescDiv);
   let CtoF = await makeCtFbtn();
   weatherDiv.appendChild(CtoF);
 }
 
 async function makeFtCbtn() {
   let FtC = document.createElement('div');
-  FtC.innerHTML = '<button>F ⇄ C</button>';
+  FtC.id = 'FtoC';
+  FtC.innerHTML = '<button id="FnC">F ⇄ C</button>';
   FtC.addEventListener('click', (e) => {
     e.preventDefault();
     weatherCMaster();
@@ -112,13 +138,36 @@ async function weatherMaster() {
   weatherContainer.innerHTML = "";
   const weatherObj = await getWeather();
   let weatherDiv = document.createElement('div');
-  weatherDiv.innerHTML = 
-  '<p>' + weatherObj.name + '<p>' + 
-  weatherObj.temp + 'F' + '<p>' + 'feels like ' + 
-  weatherObj.feelsLike + 'F' + '<p>' + weatherObj.windSpeed + ' MPH' +
-  '<p>' + weatherObj.weatherDesc;
+  weatherDiv.id = 'weatherDiv';
   weatherContainer.appendChild(weatherDiv);
+  let nameDiv = document.createElement('div');
+  nameDiv.id = 'nameID';
+  nameDiv.innerHTML = weatherObj.name;
+  weatherDiv.appendChild(nameDiv);
+  let iconDiv = document.createElement('div');
+  iconDiv.id = 'iconID';
+  weatherDiv.appendChild(iconDiv);
+  let iconPic = document.createElement('img');
+  iconPic.src = `http://openweathermap.org/img/wn/${weatherObj.icon}@2x.png`;
+  iconDiv.appendChild(iconPic);
+  let tempDiv = document.createElement('div');
+  tempDiv.id = 'tempID';
+  tempDiv.innerHTML = weatherObj.temp + 'F';
+  weatherDiv.appendChild(tempDiv);
+  let feelDiv = document.createElement('div');
+  feelDiv.id = 'feelID';
+  feelDiv.innerHTML = 'Feels like ' + weatherObj.feelsLike + 'F';
+  weatherDiv.appendChild(feelDiv);
+  let WSDiv = document.createElement('div');
+  WSDiv.id = 'WSID';
+  WSDiv.innerHTML = weatherObj.windSpeed + ' MPH';
+  weatherDiv.appendChild(WSDiv);
+  let WeatherDescDiv = document.createElement('div');
+  WeatherDescDiv.id = 'WeatherDescDivID';
+  WeatherDescDiv.innerHTML = weatherObj.weatherDesc;
+  weatherDiv.appendChild(WeatherDescDiv);
   let FtoC = await makeFtCbtn();
+  FtoC.id = 'FtoC';
   weatherDiv.appendChild(FtoC);
 }
 
