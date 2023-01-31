@@ -28,7 +28,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    font-family: 'weather-style';\n    src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\nbody {\n    background-color: darkgray;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n\ninput {\n    all: unset;\n    cursor: pointer;\n}\n\nbutton {\n    all: unset;\n    cursor: pointer;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 100px;\n}\n\n#weatherDiv {\n    display:grid;\n    margin-top: 50px;\n    justify-content: space-around;\n    gap: 10px;\n    grid-template-columns: 1fr 1fr;\n    background-color: rgb(53, 53, 53);\n    color:aliceblue;\n    padding: 15px;\n    border-radius: 5px;\n    font-family: 'weather-style';\n    \n    \n}\n\n#nameID {\n    grid-row: 1;\n    font-weight: bold;\n    font-family: 'weather-style';\n}\n\n#iconID {\n    grid-row: 2 / 5;\n}\n\n#FnC {\n    border: 5px white, solid;\n}\n\n\n#footer {\n    display: flex;\n    align-content: center;\n    justify-content: center;\n    gap: 0.5em;\n    padding: 0.5em;\n    background-color: aliceblue;\n    grid-row: 4;\n    grid-column: 4;\n    /*border: 1px red solid;*/\n    position: fixed;\n    width: 100%;\n    bottom:0;\n    left:0;\n    right:0;\n    margin-top: 120px  \n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,4BAA4B;IAC5B,4CAAsD;AAC1D;;AAEA;IACI,0BAA0B;IAC1B,yDAA0F;AAC9F;;AAEA;IACI,UAAU;IACV,eAAe;AACnB;;AAEA;IACI,UAAU;IACV,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,6BAA6B;IAC7B,SAAS;IACT,8BAA8B;IAC9B,iCAAiC;IACjC,eAAe;IACf,aAAa;IACb,kBAAkB;IAClB,4BAA4B;;;AAGhC;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,4BAA4B;AAChC;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,wBAAwB;AAC5B;;;AAGA;IACI,aAAa;IACb,qBAAqB;IACrB,uBAAuB;IACvB,UAAU;IACV,cAAc;IACd,2BAA2B;IAC3B,WAAW;IACX,cAAc;IACd,yBAAyB;IACzB,eAAe;IACf,WAAW;IACX,QAAQ;IACR,MAAM;IACN,OAAO;IACP;AACJ","sourcesContent":["@font-face {\n    font-family: 'weather-style';\n    src: url(../src/asset/Unbounded-VariableFont_wght.ttf);\n}\n\nbody {\n    background-color: darkgray;\n    background-image: url('../src/asset/blue-cloudy-sky-landscape-background-free-vector.png');\n}\n\ninput {\n    all: unset;\n    cursor: pointer;\n}\n\nbutton {\n    all: unset;\n    cursor: pointer;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 100px;\n}\n\n#weatherDiv {\n    display:grid;\n    margin-top: 50px;\n    justify-content: space-around;\n    gap: 10px;\n    grid-template-columns: 1fr 1fr;\n    background-color: rgb(53, 53, 53);\n    color:aliceblue;\n    padding: 15px;\n    border-radius: 5px;\n    font-family: 'weather-style';\n    \n    \n}\n\n#nameID {\n    grid-row: 1;\n    font-weight: bold;\n    font-family: 'weather-style';\n}\n\n#iconID {\n    grid-row: 2 / 5;\n}\n\n#FnC {\n    border: 5px white, solid;\n}\n\n\n#footer {\n    display: flex;\n    align-content: center;\n    justify-content: center;\n    gap: 0.5em;\n    padding: 0.5em;\n    background-color: aliceblue;\n    grid-row: 4;\n    grid-column: 4;\n    /*border: 1px red solid;*/\n    position: fixed;\n    width: 100%;\n    bottom:0;\n    left:0;\n    right:0;\n    margin-top: 120px  \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    font-family: 'weather-style';\n    src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\nbody {\n    background-color: darkgray;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n\ninput {\n    all: unset;\n    cursor: pointer;\n}\n\nbutton {\n    all: unset;\n    cursor: pointer;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 100px;\n}\n\n#weatherDiv {\n    display:grid;\n    margin-top: 50px;\n    justify-content: space-around;\n    gap: 10px;\n    grid-template-columns: 1fr 1fr;\n    background-color: rgb(53, 53, 53);\n    color:aliceblue;\n    padding: 15px;\n    border-radius: 5px;\n    font-family: 'weather-style';\n    \n    \n}\n\n#nameID {\n    grid-row: 1;\n    font-weight: bold;\n    font-family: 'weather-style';\n}\n\n#iconID {\n    grid-row: 2 / 5;\n}\n\n#FnC {\n    border-style: solid;\n    border-color: rgb(148, 147, 147);\n    padding: 5px;\n    border-radius: 8px;\n}\n\n\n#footer {\n    display: flex;\n    align-content: center;\n    justify-content: center;\n    gap: 0.5em;\n    padding: 0.5em;\n    background-color: aliceblue;\n    grid-row: 4;\n    grid-column: 4;\n    /*border: 1px red solid;*/\n    position: fixed;\n    width: 100%;\n    bottom:0;\n    left:0;\n    right:0;\n    margin-top: 120px  \n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,4BAA4B;IAC5B,4CAAsD;AAC1D;;AAEA;IACI,0BAA0B;IAC1B,yDAA0F;AAC9F;;AAEA;IACI,UAAU;IACV,eAAe;AACnB;;AAEA;IACI,UAAU;IACV,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,6BAA6B;IAC7B,SAAS;IACT,8BAA8B;IAC9B,iCAAiC;IACjC,eAAe;IACf,aAAa;IACb,kBAAkB;IAClB,4BAA4B;;;AAGhC;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,4BAA4B;AAChC;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,mBAAmB;IACnB,gCAAgC;IAChC,YAAY;IACZ,kBAAkB;AACtB;;;AAGA;IACI,aAAa;IACb,qBAAqB;IACrB,uBAAuB;IACvB,UAAU;IACV,cAAc;IACd,2BAA2B;IAC3B,WAAW;IACX,cAAc;IACd,yBAAyB;IACzB,eAAe;IACf,WAAW;IACX,QAAQ;IACR,MAAM;IACN,OAAO;IACP;AACJ","sourcesContent":["@font-face {\n    font-family: 'weather-style';\n    src: url(../src/asset/Unbounded-VariableFont_wght.ttf);\n}\n\nbody {\n    background-color: darkgray;\n    background-image: url('../src/asset/blue-cloudy-sky-landscape-background-free-vector.png');\n}\n\ninput {\n    all: unset;\n    cursor: pointer;\n}\n\nbutton {\n    all: unset;\n    cursor: pointer;\n}\n\n#mainContainer {\n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    flex-direction: column;\n    margin-top: 100px;\n}\n\n#weatherDiv {\n    display:grid;\n    margin-top: 50px;\n    justify-content: space-around;\n    gap: 10px;\n    grid-template-columns: 1fr 1fr;\n    background-color: rgb(53, 53, 53);\n    color:aliceblue;\n    padding: 15px;\n    border-radius: 5px;\n    font-family: 'weather-style';\n    \n    \n}\n\n#nameID {\n    grid-row: 1;\n    font-weight: bold;\n    font-family: 'weather-style';\n}\n\n#iconID {\n    grid-row: 2 / 5;\n}\n\n#FnC {\n    border-style: solid;\n    border-color: rgb(148, 147, 147);\n    padding: 5px;\n    border-radius: 8px;\n}\n\n\n#footer {\n    display: flex;\n    align-content: center;\n    justify-content: center;\n    gap: 0.5em;\n    padding: 0.5em;\n    background-color: aliceblue;\n    grid-row: 4;\n    grid-column: 4;\n    /*border: 1px red solid;*/\n    position: fixed;\n    width: 100%;\n    bottom:0;\n    left:0;\n    right:0;\n    margin-top: 120px  \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -797,7 +797,7 @@ async function getCWeather() {
 async function makeCtFbtn() {
   let FtC = document.createElement('div');
   FtC.id = 'FtoC';
-  FtC.innerHTML = '<button>F ⇄ C</button>';
+  FtC.innerHTML = '<button id="FnC">C ⇄ F</button>';
   FtC.addEventListener('click', e => {
     e.preventDefault();
     weatherMaster();
@@ -806,7 +806,7 @@ async function makeCtFbtn() {
 }
 async function weatherCMaster() {
   weatherContainer.innerHTML = "";
-  const weatherObj = await getWeather();
+  const weatherObj = await getCWeather();
   let weatherDiv = document.createElement('div');
   weatherDiv.id = 'weatherDiv';
   weatherContainer.appendChild(weatherDiv);
@@ -822,21 +822,22 @@ async function weatherCMaster() {
   iconDiv.appendChild(iconPic);
   let tempDiv = document.createElement('div');
   tempDiv.id = 'tempID';
-  tempDiv.innerHTML = weatherObj.temp + 'C';
+  tempDiv.innerHTML = Math.round(weatherObj.temp) + 'C';
   weatherDiv.appendChild(tempDiv);
   let feelDiv = document.createElement('div');
   feelDiv.id = 'feelID';
-  feelDiv.innerHTML = 'Feels like ' + weatherObj.feelsLike + 'C';
+  feelDiv.innerHTML = 'Feels like ' + Math.round(weatherObj.feelsLike) + 'C';
   weatherDiv.appendChild(feelDiv);
   let WSDiv = document.createElement('div');
   WSDiv.id = 'WSID';
-  WSDiv.innerHTML = weatherObj.windSpeed + ' KM';
+  WSDiv.innerHTML = Math.round(weatherObj.windSpeed) + ' KM Winds';
   weatherDiv.appendChild(WSDiv);
   let WeatherDescDiv = document.createElement('div');
   WeatherDescDiv.id = 'WeatherDescDivID';
   WeatherDescDiv.innerHTML = weatherObj.weatherDesc;
   weatherDiv.appendChild(WeatherDescDiv);
   let CtoF = await makeCtFbtn();
+  CtoF.id = 'FtoC';
   weatherDiv.appendChild(CtoF);
 }
 async function makeFtCbtn() {
@@ -867,15 +868,15 @@ async function weatherMaster() {
   iconDiv.appendChild(iconPic);
   let tempDiv = document.createElement('div');
   tempDiv.id = 'tempID';
-  tempDiv.innerHTML = weatherObj.temp + 'F';
+  tempDiv.innerHTML = Math.round(weatherObj.temp) + 'F';
   weatherDiv.appendChild(tempDiv);
   let feelDiv = document.createElement('div');
   feelDiv.id = 'feelID';
-  feelDiv.innerHTML = 'Feels like ' + weatherObj.feelsLike + 'F';
+  feelDiv.innerHTML = 'Feels like ' + Math.round(weatherObj.feelsLike) + 'F';
   weatherDiv.appendChild(feelDiv);
   let WSDiv = document.createElement('div');
   WSDiv.id = 'WSID';
-  WSDiv.innerHTML = weatherObj.windSpeed + ' MPH';
+  WSDiv.innerHTML = Math.round(weatherObj.windSpeed) + ' MPH Winds';
   weatherDiv.appendChild(WSDiv);
   let WeatherDescDiv = document.createElement('div');
   WeatherDescDiv.id = 'WeatherDescDivID';

@@ -79,7 +79,7 @@ async function getCWeather() {
 async function makeCtFbtn() {
   let FtC = document.createElement('div');
   FtC.id = 'FtoC';
-  FtC.innerHTML = '<button>F ⇄ C</button>';
+  FtC.innerHTML = '<button id="FnC">C ⇄ F</button>';
   FtC.addEventListener('click', (e) => {
     e.preventDefault();
     weatherMaster();
@@ -89,7 +89,7 @@ async function makeCtFbtn() {
 
 async function weatherCMaster() {
   weatherContainer.innerHTML = "";
-  const weatherObj = await getWeather();
+  const weatherObj = await getCWeather();
   let weatherDiv = document.createElement('div');
   weatherDiv.id = 'weatherDiv';
   weatherContainer.appendChild(weatherDiv);
@@ -105,21 +105,22 @@ async function weatherCMaster() {
   iconDiv.appendChild(iconPic);
   let tempDiv = document.createElement('div');
   tempDiv.id = 'tempID';
-  tempDiv.innerHTML = weatherObj.temp + 'C';
+  tempDiv.innerHTML = Math.round(weatherObj.temp) + 'C';
   weatherDiv.appendChild(tempDiv);
   let feelDiv = document.createElement('div');
   feelDiv.id = 'feelID';
-  feelDiv.innerHTML = 'Feels like ' + weatherObj.feelsLike + 'C';
+  feelDiv.innerHTML = 'Feels like ' + Math.round(weatherObj.feelsLike) + 'C';
   weatherDiv.appendChild(feelDiv);
   let WSDiv = document.createElement('div');
   WSDiv.id = 'WSID';
-  WSDiv.innerHTML = weatherObj.windSpeed + ' KM';
+  WSDiv.innerHTML = Math.round(weatherObj.windSpeed) + ' KM Winds';
   weatherDiv.appendChild(WSDiv);
   let WeatherDescDiv = document.createElement('div');
   WeatherDescDiv.id = 'WeatherDescDivID';
   WeatherDescDiv.innerHTML = weatherObj.weatherDesc;
   weatherDiv.appendChild(WeatherDescDiv);
   let CtoF = await makeCtFbtn();
+  CtoF.id = 'FtoC';
   weatherDiv.appendChild(CtoF);
 }
 
@@ -152,15 +153,15 @@ async function weatherMaster() {
   iconDiv.appendChild(iconPic);
   let tempDiv = document.createElement('div');
   tempDiv.id = 'tempID';
-  tempDiv.innerHTML = weatherObj.temp + 'F';
+  tempDiv.innerHTML = Math.round(weatherObj.temp) + 'F';
   weatherDiv.appendChild(tempDiv);
   let feelDiv = document.createElement('div');
   feelDiv.id = 'feelID';
-  feelDiv.innerHTML = 'Feels like ' + weatherObj.feelsLike + 'F';
+  feelDiv.innerHTML = 'Feels like ' + Math.round(weatherObj.feelsLike) + 'F';
   weatherDiv.appendChild(feelDiv);
   let WSDiv = document.createElement('div');
   WSDiv.id = 'WSID';
-  WSDiv.innerHTML = weatherObj.windSpeed + ' MPH';
+  WSDiv.innerHTML = Math.round(weatherObj.windSpeed) + ' MPH Winds';
   weatherDiv.appendChild(WSDiv);
   let WeatherDescDiv = document.createElement('div');
   WeatherDescDiv.id = 'WeatherDescDivID';
